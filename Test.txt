@@ -1,22 +1,27 @@
-<!doctype html>
-<html>
-<head>
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script>
-function add(){
-var a,b,c;
-a=Number(document.getElementById("num1").value);
-b=Number(document.getElementById("num2").value);
-c= a + b;
-document.getElementById("total").value= c;
-}
-</script>
-</head>
-<body>
-Enter the First number : <input id="num1">
-Enter the Second number: <input id="num2">
-<button onclick="add()">Add</button>
-<input id="total" placeholder="0" readonly>
 
-</body>
+<html>
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js" type='text/javascript'></script>
+    
+    <script language="javascript">
+    $(document).ready(function(){
+      $("#calculate").click(function () {
+      var num1 = $("#num1").val();
+      var num2 = $("#num2").val();
+      var answer = parseInt(num1) + parseInt(num2);
+      alert(answer);
+      $("#total").val(answer);
+    });
+  });
+  </script>
+  
+  </head>
+  
+  <body>
+      Enter the First number:<input type="number" id="num1" class="form-control" placeholder="0"><br>
+      Enter the Second number: <input type="number" id="num2" class="form-control" placeholder="0"><br>
+      Total : <input type="number" id="total" class="form-control" placeholder="0" readonly>
+      <button id="calculate" type="button">calculate</button>
+  </body>
+ 
 </html>
