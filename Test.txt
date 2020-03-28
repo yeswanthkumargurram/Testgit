@@ -1,22 +1,22 @@
+<!doctype html>
 <html>
 <head>
-	
-<link rel="stylesheet" type="text/css" href="style.css">
-	
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>	
-<script type="text/javascript" src="index.js"></script>
-	
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+function add(){
+var a,b,c;
+a=Number(document.getElementById("num1").value);
+b=Number(document.getElementById("num2").value);
+c= a + b;
+document.getElementById("total").value= c;
+}
+</script>
 </head>
-	
 <body>
-<h1>Adding Two Numbers</h1>	
-<input id="num1" placeholder="0">
-	
-<input  id="num2" placeholder="0"></br>	
-<button id="add" type="button" onclick="add()" >Add</button></br>
-	
+Enter the First number : <input id="num1">
+Enter the Second number: <input id="num2">
+<button onclick="add()">Add</button>
 <input id="total" placeholder="0" readonly>
-	
-</body
-	
+
+</body>
 </html>
